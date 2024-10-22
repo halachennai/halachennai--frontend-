@@ -39,7 +39,7 @@ const LoginSignup = () => {
   const signup = async () => {
     console.log("Sign Up Execution", formData);
     let responseData;
-    await fetch(`${process.env.REACT_APP_URL}/signup`, {
+    await fetch(`${process.env.REACT_APP_URL}signup`, {
       method: "POST",
       headers: {
         Accept: "application/form-data",
