@@ -9,7 +9,7 @@ const RazorpayButton = ({ amount, cartValues }) => {
     }
     try {
       console.log(process.env.REACT_APP_URL)
-      const response = await fetch(`${process.env.REACT_APP_URL}/razorpay-order`, {
+      const response = await fetch(`${process.env.REACT_APP_URL}razorpay-order`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -34,7 +34,7 @@ const RazorpayButton = ({ amount, cartValues }) => {
 
           // Send payment details, email, and cart values to the backend
           try {
-            const postPaymentResponse = await fetch(`${process.env.REACT_APP_URL}/payment`, {
+            const postPaymentResponse = await fetch(`${process.env.REACT_APP_URL}payment`, {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",

@@ -16,7 +16,7 @@ const LoginSignup = () => {
   const login = async () => {
     console.log("Login Execution", formData);
     let responseData;
-    await fetch(`${process.env.REACT_APP_URL}/login`, {
+    await fetch(`${process.env.REACT_APP_URL}login`, {
       method: "POST",
       headers: {
         Accept: "application/form-data",

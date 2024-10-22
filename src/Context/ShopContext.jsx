@@ -17,12 +17,12 @@ const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_URL}/allproducts`)
+    fetch(`${process.env.REACT_APP_URL}allproducts`)
       .then((response) => response.json())
       .then((data) => setAll_product(data));
 
     if (localStorage.getItem("auth-token")) {
-      fetch(`${process.env.REACT_APP_URL}/getcart`, {
+      fetch(`${process.env.REACT_APP_URL}getcart`, {
         method: "POST",
         headers: {
           Accept: "application/form-data",
@@ -57,7 +57,7 @@ const ShopContextProvider = (props) => {
     });
 
     if (localStorage.getItem("auth-token")) {
-      fetch(`${process.env.REACT_APP_URL}/addtocart`, {
+      fetch(`${process.env.REACT_APP_URL}addtocart`, {
         method: "POST",
         headers: {
           Accept: "application/form-data",
@@ -73,7 +73,7 @@ const ShopContextProvider = (props) => {
 
   const removeFromCart = (itemId, customName, customSize) => {
     // Fetch API call to remove item from the cart
-    fetch(`${process.env.REACT_APP_URL}/removefromcart`, {
+    fetch(`${process.env.REACT_APP_URL}removefromcart`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
