@@ -32,7 +32,8 @@ const UserPage = () => {
 
         const data = await response.json();
         if (data.success) {
-          setUserData(data.data); // Assuming API response has a data object
+          setUserData(data.data);
+          console.log(data.data) // Assuming API response has a data object
         } else {
           console.error("Error fetching user data:", data.message);
           navigate("/login"); // Navigate to login on failure
@@ -51,6 +52,7 @@ const UserPage = () => {
   };
 
   const handleSave = async () => {
+    console.log(userData);
     try {
       const response = await fetch(`${process.env.REACT_APP_URL}update-profile`, {
         method: "POST",
@@ -107,8 +109,8 @@ const UserPage = () => {
             <input
               className="form-input"
               type="text"
-              name="phone"
-              value={userData.phone || ""}
+              name="phoneNumber"
+              value={userData.phoneNumber || ""}
               onChange={handleChange}
             />
           </div>
@@ -130,7 +132,7 @@ const UserPage = () => {
         <div className="profile-view">
           <p className="profile-info">Name: {userData.name}</p>
           <p className="profile-info">Email: {userData.email}</p>
-          <p className="profile-info">Phone: {userData.phone}</p>
+          <p className="profile-info">Phone: {userData.phoneNumber}</p>
           <p className="profile-info">Address: {userData.address}</p>
           <button className="edit-button" onClick={toggleEditMode}>
             Edit
