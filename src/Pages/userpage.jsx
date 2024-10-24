@@ -21,7 +21,7 @@ const UserPage = () => {
         setEmail(storedEmail);
 
         const response = await fetch(
-          `${process.env.REACT_APP_URL}/user-profile?email=${storedEmail}`,
+          `${process.env.REACT_APP_URL}user-profile?email=${storedEmail}`,
           {
             method: "GET",
             headers: {
@@ -52,7 +52,7 @@ const UserPage = () => {
 
   const handleSave = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_URL}/update-profile`, {
+      const response = await fetch(`${process.env.REACT_APP_URL}update-profile`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
