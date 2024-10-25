@@ -34,7 +34,7 @@ const RazorpayButton = ({ amount, cartValues }) => {
 
           // Send payment details, email, and cart values to the backend
           try {
-            const postPaymentResponse = await fetch(`${process.env.REACT_APP_URL}payment`, {
+            const postPaymentResponse = await fetch(`${process.env.REACT_APP_URL}confirm-payment`, {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
