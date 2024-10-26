@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.css";
 import logo from "../Assets/Custom/logo.png";
 import instagram_icon from "../Assets/Frontend_Assets/instagram_icon.png";
-import whatsapp_icon from "../Assets/Frontend_Assets/whatsapp_icon.png";
+import youtube_icon from "../Assets/Frontend_Assets/youtube_icon.png";
 import DeliveryNote from "../DeliveryNote/DeliveryNote";
 
 const Footer = () => {
@@ -19,12 +19,17 @@ const Footer = () => {
       </ul>
       <div className="footer-social-icon">
         <div className="footer-icons-container">
-          <img src={instagram_icon} alt="" />
+          <a href="https://www.instagram.com/hala.chennai?igsh=b3NiOXM0M2RpYnIz">
+            <img src={instagram_icon} alt="" />
+          </a>
         </div>
         <div className="footer-icons-container">
-          <img src={whatsapp_icon} alt="" />
+          <a href="https://www.youtube.com/@HalaChennai">
+            <img src={youtube_icon} alt="" />
+          </a>
         </div>
       </div>
+
       <div className="footer-copyright">
         <hr />
         <p>Copyright @ 2024 - All Right Reserved</p>
