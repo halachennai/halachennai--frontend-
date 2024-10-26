@@ -11,7 +11,6 @@ const Popular = () => {
       .then((data) => setPopularProducts(data));
   }, []);
 
-  // Get the last 4 products from popularProducts array
   const lastFourProducts = popularProducts.slice(-4);
 
   return (
