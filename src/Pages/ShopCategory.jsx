@@ -15,9 +15,7 @@ const ShopCategory = (props) => {
     <div className="shop-category">
       <img className="shopcategory-banner" src={props.banner} alt="" />
       <div className="shopcategory-indexSort">
-        <p>
-          <span>Showing 1-12</span> out of {filteredProducts.length} products
-        </p>
+        <p>Showing 1-{filteredProducts.length} products</p>
       </div>
       <div className="shopcategory-products">
         {all_product.map((item, i) => {
@@ -37,7 +35,7 @@ const ShopCategory = (props) => {
           }
         })}
       </div>
-      <div className="shopcategory-loadmore">Explore More</div>
+      {/* <div className="shopcategory-loadmore">Explore More</div> */}
     </div>
   );
 };

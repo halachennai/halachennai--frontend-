@@ -12,11 +12,10 @@ const Footer = () => {
       <div className="footer-logo">
         <img src={logo} alt="" />
       </div>
-      <ul className="footer-links">
+      {/* <ul className="footer-links">
         <li>Products</li>
         <li>About</li>
-        <li>Contact</li>
-      </ul>
+      </ul> */}
       <div className="footer-social-icon">
         <div className="footer-icons-container">
           <a href="https://www.instagram.com/hala.chennai?igsh=b3NiOXM0M2RpYnIz">
