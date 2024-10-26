@@ -3,6 +3,7 @@ import "./CartItems.css";
 import { ShopContext } from "../../Context/ShopContext";
 import remove_icon from "../Assets/Frontend_Assets/cart_cross_icon.png";
 import RazorpayButton from "./RazorpayButton";
+import ProfileNote from "../ProfileNote/ProfileNote";
 
 const CartItems = () => {
   const { getTotalCartAmount, all_product, cartItems, removeFromCart } =
@@ -106,6 +107,7 @@ const CartItems = () => {
         }
         return null;
       })}
+      <ProfileNote />
       <div className="cartitems-down">
         <div className="cartitems-total">
           <h1>Cart Totals</h1>

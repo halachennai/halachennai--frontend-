@@ -1,5 +1,5 @@
 import React from "react";
-import "./DeliveryNote.css"; // Import the CSS file for styling
+import "./DeliveryNote.css";
 
 const DeliveryNote = () => {
   return (
