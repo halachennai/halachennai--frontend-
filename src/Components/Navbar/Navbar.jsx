@@ -57,6 +57,11 @@ export const Navbar = () => {
         <li onClick={() => setMenu("contact")}>
           {menu === "contact" && <hr />}
         </li>
+        <li onClick={() => setMenu("home")}>
+          <Link style={{ textDecoration: "none" }} to="/toc">
+            Terms and Conditions
+          </Link>
+        </li>
       </ul>
       <div className="nav-login-cart">
         {localStorage.getItem("auth-token") ? (
