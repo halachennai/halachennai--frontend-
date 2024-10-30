@@ -4,6 +4,7 @@ import logo from "../Assets/Custom/logo.png";
 import instagram_icon from "../Assets/Frontend_Assets/instagram_icon.png";
 import youtube_icon from "../Assets/Frontend_Assets/youtube_icon.png";
 import DeliveryNote from "../DeliveryNote/DeliveryNote";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -31,7 +32,10 @@ const Footer = () => {
 
       <div className="footer-copyright">
         <hr />
-        <p>Copyright @ 2024 - All Right Reserved</p>
+        <p>Copyright @ 2024 - All Right Reserved</p>{" "}
+        <Link style={{ textDecoration: "none" }} to="/toc">
+          Terms and Conditions
+        </Link>
       </div>
     </div>
   );

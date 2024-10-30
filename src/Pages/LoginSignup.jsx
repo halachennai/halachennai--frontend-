@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./CSS/LoginSignup.css";
+import { Link } from "react-router-dom";
 
 const LoginSignup = () => {
   const [state, setState] = useState("Login");
@@ -29,7 +30,7 @@ const LoginSignup = () => {
 
     if (responseData.success) {
       localStorage.setItem("auth-token", responseData.token);
-      localStorage.setItem("email",formData.email)
+      localStorage.setItem("email", formData.email);
       window.location.replace("/");
     } else {
       alert(responseData.errors);
@@ -52,7 +53,7 @@ const LoginSignup = () => {
 
     if (responseData.success) {
       localStorage.setItem("auth-token", responseData.token);
-      localStorage.setItem("email",formData.email)
+      localStorage.setItem("email", formData.email);
       window.location.replace("/");
     } else {
       alert(responseData.errors + "Mail ID already Exists");
@@ -123,7 +124,13 @@ const LoginSignup = () => {
 
         <div className="loginsignup-agree">
           <input type="checkbox" name="" id="" />
-          <p>By continuing, I agree to terms of use & privacy policy.</p>
+          <p>
+            By continuing, I agree to{" "}
+            <Link style={{ textDecoration: "none" }} to="/toc">
+              Terms
+            </Link>{" "}
+            of use & privacy policy.
+          </p>
         </div>
       </div>
     </div>
