@@ -10,7 +10,7 @@ import LoginSignup from "./Pages/LoginSignup";
 import Footer from "./Components/Footer/Footer";
 import Userpage from "./Pages/userpage";
 import Toc from "./Pages/Toc";
-import tshirt_banner from "./Components/Assets/Frontend_Assets/tshirtbanner.png";
+import tshirt_banner from "./Components/Assets/Frontend_Assets/jersey_banner.jpeg";
 
 function App() {
   return (
