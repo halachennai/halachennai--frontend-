@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./CSS/Userpage.css";
+import "./CSS/userpage.css";
 
 const UserPage = () => {
   const [userData, setUserData] = useState({});
