@@ -151,7 +151,7 @@ const CartItems = () => {
             </div>
           </div>
           <RazorpayButton
-            amount={getTotalCartAmount()}
+            amount={getTotalCartAmount() + deliveryCharge}
             cartValues={cartItemsArray}
           />
         </div>
