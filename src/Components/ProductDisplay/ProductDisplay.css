@@ -95,6 +95,14 @@
   cursor: pointer;
 }
 
+/* Add this to ProductDisplay.css */
+.size-selected {
+  background-color: #007bff; /* Highlight color */
+  color: white; /* Text color when highlighted */
+  border: 1px solid #007bff; /* Border color */
+  transition: 0.3s;
+}
+
 @media (max-width: 1280px) {
   .productdisplay {
     margin: 0px 60px;
