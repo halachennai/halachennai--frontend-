@@ -3,6 +3,7 @@ import "./ProductDisplay.css";
 import star_icon from "../Assets/Frontend_Assets/star_icon.png";
 import star_dull_icon from "../Assets/Frontend_Assets/star_dull_icon.png";
 import { ShopContext } from "../../Context/ShopContext";
+import size_chart from "../Assets/Custom/SizeChart.jpeg";
 
 const ProductDisplay = (props) => {
   const { product } = props;
@@ -46,10 +47,15 @@ const ProductDisplay = (props) => {
             alt="Product Image 2"
             onClick={() => setMainImage(product.subimage2 || product.image)}
           />
-          <img
+          {/* <img
             src={product.subimage3 || product.image}
             alt="Product Image 3"
             onClick={() => setMainImage(product.subimage3 || product.image)}
+          /> */}
+          <img
+            src={size_chart}
+            alt="Size chart"
+            onClick={() => setMainImage(size_chart)}
           />
         </div>
         <div className="productdisplay-img">
