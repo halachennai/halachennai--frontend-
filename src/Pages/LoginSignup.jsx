@@ -107,6 +107,7 @@ const LoginSignup = () => {
           </div>
         </div>
         <button
+          className="logbut"
           onClick={() => {
             state === "Login" ? login() : signup();
           }}
