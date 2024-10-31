@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./CSS/LoginSignup.css";
 import { Link } from "react-router-dom";
+import { FaEye, FaEyeSlash } from "react-icons/fa"; // Import eye icons
 
 const LoginSignup = () => {
   const [state, setState] = useState("Login");
@@ -9,9 +10,14 @@ const LoginSignup = () => {
     password: "",
     email: "",
   });
+  const [passwordVisible, setPasswordVisible] = useState(false); // Track password visibility
 
   const changeHandler = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
   };
 
   const login = async () => {
@@ -83,13 +89,22 @@ const LoginSignup = () => {
             onChange={changeHandler}
             placeholder="Email Address"
           />
-          <input
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={changeHandler}
-            placeholder="Password"
-          />
+          <div className="password-field">
+            <input
+              type={passwordVisible ? "text" : "password"}
+              name="password"
+              value={formData.password}
+              onChange={changeHandler}
+              placeholder="Password"
+            />
+            <button
+              type="button"
+              onClick={togglePasswordVisibility}
+              className="eye-icon"
+            >
+              {passwordVisible ? <FaEyeSlash /> : <FaEye />}
+            </button>
+          </div>
         </div>
         <button
           onClick={() => {
