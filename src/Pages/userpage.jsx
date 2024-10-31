@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./CSS/userpage.css";
+import "./CSS/Userpage.css";
 
 const UserPage = () => {
   const [userData, setUserData] = useState({});
@@ -33,7 +33,7 @@ const UserPage = () => {
         const data = await response.json();
         if (data.success) {
           setUserData(data.data);
-          console.log(data.data) // Assuming API response has a data object
+          console.log(data.data); // Assuming API response has a data object
         } else {
           console.error("Error fetching user data:", data.message);
           navigate("/login"); // Navigate to login on failure
@@ -54,13 +54,16 @@ const UserPage = () => {
   const handleSave = async () => {
     console.log(userData);
     try {
-      const response = await fetch(`${process.env.REACT_APP_URL}update-profile`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, userData }), // Send email and updated data
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_URL}update-profile`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, userData }), // Send email and updated data
+        }
+      );
 
       const data = await response.json();
       if (data.success) {
@@ -81,7 +84,7 @@ const UserPage = () => {
 
   return (
     <div className="user-profile-container">
-      <h1 className="profile-header">User Profile</h1>
+      <h1 className="profile-header">Delivery Details</h1>
       {editMode ? (
         <div className="profile-edit-form">
           <div className="form-group">

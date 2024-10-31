@@ -8,7 +8,7 @@ import Product from "./Pages/Product";
 import Cart from "./Pages/Cart";
 import LoginSignup from "./Pages/LoginSignup";
 import Footer from "./Components/Footer/Footer";
-import Userpage from "./Pages/userpage";
+import Userpage from "./Pages/Userpage";
 import Toc from "./Pages/Toc";
 import tshirt_banner from "./Components/Assets/Frontend_Assets/jersey_banner.png";
 
