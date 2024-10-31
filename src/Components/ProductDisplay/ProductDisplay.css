@@ -97,7 +97,7 @@
 
 /* Add this to ProductDisplay.css */
 .size-selected {
-  background-color: #007bff; /* Highlight color */
+  background-color: #007bff !important; /* Highlight color */
   color: white; /* Text color when highlighted */
   border: 1px solid #007bff; /* Border color */
   transition: 0.3s;
