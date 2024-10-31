@@ -8,7 +8,7 @@ import Product from "./Pages/Product";
 import Cart from "./Pages/Cart";
 import LoginSignup from "./Pages/LoginSignup";
 import Footer from "./Components/Footer/Footer";
-import Userpage from "./Pages/Userpage";
+import UserPage from "./Pages/userpage";
 import Toc from "./Pages/Toc";
 import tshirt_banner from "./Components/Assets/Frontend_Assets/jersey_banner.png";
 
@@ -28,7 +28,7 @@ function App() {
           </Route>
           <Route path="/cart" element={<Cart />}></Route>
           <Route path="/login" element={<LoginSignup />}></Route>
-          <Route path="/userpage" element={<Userpage />}></Route>
+          <Route path="/userpage" element={<UserPage />}></Route>
           <Route path="/toc" element={<Toc />}></Route>
         </Routes>
         <Footer />
