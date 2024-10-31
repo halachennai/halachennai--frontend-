@@ -61,11 +61,16 @@
 .loginsignup-agree {
   display: flex;
   align-items: center;
-  margin-top: 25px;
-  gap: 20px;
-  color: #5c5c5c;
-  font-size: 18px;
-  font-weight: 500;
+  gap: 0.5em; /* Space between checkbox and text */
+}
+
+.loginsignup-agree input[type="checkbox"] {
+  margin: 0; /* Remove default checkbox margin */
+}
+
+.loginsignup-agree p {
+  margin: 0;
+  font-size: 0.9em; /* Adjust font size if needed */
 }
 
 .password-field {
