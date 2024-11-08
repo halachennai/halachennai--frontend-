@@ -53,7 +53,6 @@
   transition: all 0.3s ease;
   margin: 0 auto;
 }
-
 .shopcategory-Search:focus {
   width: 500px; 
   max-width: 90%;

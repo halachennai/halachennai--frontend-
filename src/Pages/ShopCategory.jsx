@@ -14,7 +14,7 @@ const ShopCategory = (props) => {
     setSearch(e.target.value);
   };
 
-  // Memoize the filtered products to prevent unnecessary re-renders
+  
   const filteredProducts = useMemo(() => {
     return all_product.filter(
       (item) =>
