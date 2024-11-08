@@ -42,6 +42,30 @@
   font-weight: 500;
 }
 
+.shopcategory-Search {
+  width: 300px; /* Initial width */
+  max-width: 80%; /* Responsive width */
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  transition: all 0.3s ease;
+  margin: 0 auto;
+}
+
+.shopcategory-Search:focus {
+  width: 500px; 
+  max-width: 90%;
+  border-color: #007bff; 
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); 
+}
+
+
+.shopcategory-Search::placeholder {
+  color: #888;
+  font-style: italic;
+}
 @media (max-width: 1280px) {
   .shopcategory-banner {
     margin: 20px auto;
